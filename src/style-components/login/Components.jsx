@@ -16,6 +16,6 @@ export const DivContenedor = styled.div`
 
 export const Form = styled.form`
     ${tw`
-        my-10
+        my-10 flex flex-col space-y-5
     `}
 `;
