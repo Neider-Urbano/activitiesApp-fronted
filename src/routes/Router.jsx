@@ -5,7 +5,7 @@ import PageLogin from '../pages/login/PageLogin'
 export const Router = () => {
   return (
    <Routes>
-      <Route path="/" exact element={<PageLogin/>} />
+      <Route path="/login" exact element={<PageLogin/>} />
    </Routes> 
   )
 }
