@@ -1,9 +1,8 @@
-import './App.css';
-import { MyDiv } from './Style';
+import { Router } from './routes/Router';
 
 function App() {
   return (
-    <MyDiv>Hola</MyDiv>
+    <Router />
   );
 }
 
