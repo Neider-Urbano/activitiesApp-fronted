@@ -53,6 +53,6 @@ export const ButtonRegisterA = styled.a`
 
 export const ContenedorDelMenu=styled.div`
     ${tw`
-        bg-[#46158E] md:bg-[#46158r] lg:bg-[#46158E] flex h-[100vh] justify-center items-center 
+        bg-[#46158E] md:bg-[#46158E] lg:bg-[#46158E] flex h-[100vh] justify-center items-center 
     `}
 `;
