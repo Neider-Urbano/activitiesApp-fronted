@@ -49,3 +49,10 @@ export const ButtonRegisterA = styled.a`
         text-indigo-600 font-medium inline-flex space-x-1 items-center
     `}
 `;
+
+
+export const ContenedorDelMenu=styled.div`
+    ${tw`
+        bg-[#46158E] md:bg-[#46158E] lg:bg-[#46158E] flex h-[100vh] justify-center items-center 
+    `}
+`;
