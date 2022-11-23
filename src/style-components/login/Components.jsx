@@ -4,19 +4,19 @@ import tw from "twin.macro";
 
 export const Main = styled.main`
     ${tw`
-        antialiased bg-slate-200 py-[100px]
+        antialiased bg-slate-200 py-[40px]
     `}
 `;
 
 export const DivContenedor = styled.div`
     ${tw`
-        max-w-lg bg-white p-8 rounded-xl shadow shadow-slate-300
+        max-w-lg bg-white p-8 rounded-xl shadow shadow-slate-300 w-[380px]
     `}
 `;
 
 export const Form = styled.form`
     ${tw`
-        my-10 flex flex-col space-y-5
+        mt-10 flex flex-col space-y-5
     `}
 `;
 
@@ -40,13 +40,13 @@ export const ButtonAutenticarStyle = styled.button`
 
 export const ContenedorForgotPassword = styled.div`
     ${tw`
-        flex flex-row justify-between
+        flex flex-row justify-end
     `}
 `;
 
 export const ButtonRegisterA = styled.a`
     ${tw`
-        text-indigo-600 font-medium inline-flex space-x-1 items-center
+        text-indigo-600 font-medium inline-flex space-x-1 items-center pl-[5px]
     `}
 `;
 

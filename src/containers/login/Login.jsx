@@ -6,14 +6,15 @@ import { Player } from '@lottiefiles/react-lottie-player';
 const Login = () => {
   return (
     <Main>
-        <div className=' flex justify-center items-center h-[100vh]'>
+        <div className='flex justify-center items-center h-[100vh]'>
             <DivContenedor>
-                    <h1 className="text-4xl font-medium">Login</h1>
-                    <p className="text-slate-500">Hi, Welcome back 👋</p>
+                    <h1 className="text-2xl font-medium">Login</h1>
+                    <p className="text-slate-500">Hi, Welcome to Activities app 👋</p>
 
-                    <ButtonAutenticar urlImg="https://www.svgrepo.com/show/355037/google.svg" textSpan="Login with Google"/>
-                    <ButtonAutenticar urlImg="https://www.svgrepo.com/show/355037/google.svg" textSpan="Login with Facebook"/>
-
+                    <div className=''> 
+                        <ButtonAutenticar urlImg="https://www.svgrepo.com/show/355037/google.svg" textSpan="Login with Google"/>
+                        <ButtonAutenticar urlImg="https://www.svgrepo.com/show/158427/facebook.svg" textSpan="Login with Facebook"/>
+                    </div>
                     <Form action="">
                         <GroupLabel textP="Email address" type="email" placeholder="Enter email address"/>
                         <GroupLabel textP="Password" type="password" placeholder="Enter your password"/>
@@ -24,7 +25,7 @@ const Login = () => {
                         <ButtonRegister textP="Not registered yet" textSpan="Register now"/>
                     </Form>
             </DivContenedor>
-            <div>
+            <div className='hidden md:block ml-[50px]'>
                 <Player
                     src='https://assets7.lottiefiles.com/packages/lf20_tpnk0wok.json'
                     className="player"
