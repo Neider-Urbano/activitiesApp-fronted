@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { ContenedorForgotPassword } from '../../style-components/login/Components'
 
 const DivForgotPassword = ({textA, textInput}) => {
   return (
     <ContenedorForgotPassword>
         <div>
-            <a href="#" className="font-medium text-indigo-600">{textA}</a>
+            <Link to="/forgotpasword" className="font-medium text-indigo-600">{textA}</Link>
         </div>
     </ContenedorForgotPassword>
   )

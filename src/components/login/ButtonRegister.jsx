@@ -5,7 +5,7 @@ const ButtonRegister = ({textP, textSpan}) => {
   return (
     <p className="text-center">
         {textP}
-        <ButtonRegisterA href="#">
+        <ButtonRegisterA to="/register">
             <span>{textSpan}</span>
         </ButtonRegisterA>
     </p>
