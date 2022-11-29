@@ -1,10 +1,10 @@
 import React from 'react'
 import { ButtonLoginAzul } from '../../style-components/login/Components'
 
-const ButtonLogin = ({textSpan}) => {
+const ButtonLogin = ({textSpan,onActionForm}) => {
   return (
-    <ButtonLoginAzul>
-        <span>{textSpan}</span>
+    <ButtonLoginAzul onClick={(e)=>onActionForm(e)}>
+      {textSpan}
     </ButtonLoginAzul>
   )
 }

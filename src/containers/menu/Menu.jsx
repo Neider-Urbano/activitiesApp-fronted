@@ -1,6 +1,6 @@
 import React from "react";
 import ItemsNavBar from "../../components/Menu/ItemsNavBar";
-import { ContenedorDelMenu } from "../../style-components/login/Components";
+import { ContenedorDelMenu } from "../../style-components/public/Components";
 
 
 const Menu = () => {
