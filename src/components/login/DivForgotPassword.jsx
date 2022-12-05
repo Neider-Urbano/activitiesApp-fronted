@@ -6,7 +6,7 @@ const DivForgotPassword = ({ textA }) => {
   return (
     <ContenedorForgotPassword>
       <div>
-        <Link to="/forgotpasword" className="font-medium text-indigo-600">
+        <Link to="/forgotpassword" className="font-medium text-indigo-600">
           {textA}
         </Link>
       </div>

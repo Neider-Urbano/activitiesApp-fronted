@@ -4,7 +4,7 @@ import Register from "../../containers/register/Register";
 export const PageRegister = () => {
   return (
     <main className="antialiased bg-slate-200 flex h-screen">
-      <div className=" bg-white p-16 md:p-8 lg:p-16 w-screen md:w-auto lg:w-2/5">
+      <div className=" bg-white p-16 md:p-8 lg:p-20 w-screen md:w-auto lg:w-2/5">
         <h1 className="text-xl font-medium text-slate-900">Sing up</h1>
         <Register />
       </div>
