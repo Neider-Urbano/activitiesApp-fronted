@@ -1,15 +1,20 @@
-import React from 'react'
-import { InputForm } from '../../style-components/login/Components'
+import React from "react";
+import { InputForm } from "../../style-components/login/Components";
 
-const Label = ({placeholder, type,valueData, onInput, error}) => {
+const Label = ({ placeholder, type, valueData, onInput, error, name }) => {
   return (
-    <label htmlFor={type}>
-      <InputForm id={type} name={type} type={type} placeholder={placeholder} 
+    <label htmlFor={name} className="w-full">
+      <InputForm
+        id={name}
+        name={name}
+        type={type}
+        placeholder={placeholder}
         className={`${error ? "border-red-300" : "border-slate-200"}`}
-        value={valueData} onChange={(e)=>onInput(e)}
+        value={valueData}
+        onChange={(e) => onInput(e)}
       />
     </label>
-  )
-}
+  );
+};
 
-export default Label
+export default Label;
