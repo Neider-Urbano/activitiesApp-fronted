@@ -1,11 +1,9 @@
 import React from "react";
-import {
-  ButtonLogin,
-  ButtonRegister,
-  GroupLabel,
-} from "../../components/login";
+import { ButtonRegister, GroupLabel } from "../../components/login";
 import toast, { Toaster } from "react-hot-toast";
 import { useState } from "react";
+import validateInputs from "../../utils/Register/validateInputs";
+import ButtonAzul from "../../components/Buttons/ButtonAzul";
 
 const initialState = {
   firstname: "",
@@ -18,7 +16,9 @@ const initialState = {
 const Register = () => {
   const [dataUser, setDataUser] = useState(initialState);
   const [errors, setErrors] = useState("");
-  const notify = (error) => toast.error(error);
+  const notify = (message, icono) => {
+    toast[icono](message);
+  };
 
   const handleInput = (e) => {
     const { value, name } = e.target;
@@ -26,28 +26,28 @@ const Register = () => {
       ...dataUser,
       [name]: value,
     });
-    setErrors(validateInputs(name, value));
+    setErrors(validateInputs(name, value, dataUser));
   };
 
-  const handleActionForm = (e) => {
+  const handleActionForm = async (e) => {
     e.preventDefault();
     e.target.disabled = true;
     var errorEncontrado = "";
     Object.keys(dataUser).map((key) => {
       if (errorEncontrado === "")
-        errorEncontrado = validateInputs(key, dataUser[key]);
+        errorEncontrado = validateInputs(key, dataUser[key], dataUser);
     });
-
     if (errorEncontrado === "") {
       setDataUser(initialState);
+      toast.remove();
+      notify("registered account", "success");
     } else {
       setErrors(errorEncontrado);
       toast.remove();
-      notify(errorEncontrado);
+      notify(errorEncontrado, "error");
     }
+    e.target.disabled = false;
   };
-
-  function validateInputs() {}
 
   return (
     <form className="my-10">
@@ -57,17 +57,17 @@ const Register = () => {
             type="text"
             name="firstname"
             placeholder="Enter first name"
-            valueData={""}
-            onInput={""}
-            error={""}
+            valueData={dataUser.firstname}
+            onInput={handleInput}
+            error={errors.includes("firstname")}
           />
           <GroupLabel
             type="text"
             name="lastname"
             placeholder="Enter last name"
-            valueData={""}
-            onInput={""}
-            error={""}
+            valueData={dataUser.lastname}
+            onInput={handleInput}
+            error={errors.includes("lastname")}
           />
         </div>
 
@@ -75,35 +75,30 @@ const Register = () => {
           type="email"
           name="email"
           placeholder="Enter your email"
-          valueData={""}
-          onInput={""}
-          error={""}
+          valueData={dataUser.email}
+          onInput={handleInput}
+          error={errors.includes("email")}
         />
 
         <GroupLabel
           type="password"
           name="password"
           placeholder="Enter your password"
-          valueData={""}
-          onInput={""}
-          error={""}
+          valueData={dataUser.password}
+          onInput={handleInput}
+          error={errors.includes("password")}
         />
 
         <GroupLabel
           type="password"
           name="passwordconfirm"
           placeholder="Enter confirm your password"
-          valueData={""}
-          onInput={""}
-          error={""}
+          valueData={dataUser.passwordconfirm}
+          onInput={handleInput}
+          error={errors.includes("different")}
         />
 
-        <ButtonLogin
-          textSpan="Register med"
-          onActionForm={() => {
-            console.log("hola");
-          }}
-        />
+        <ButtonAzul textSpan="Register med" onActionForm={handleActionForm} />
 
         <ButtonRegister
           textP="I have an account"

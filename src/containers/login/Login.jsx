@@ -7,13 +7,13 @@ import {
 import {
   GroupLabel,
   ButtonAutenticar,
-  ButtonLogin,
   ButtonRegister,
   DivForgotPassword,
 } from "../../components/login/index";
 import { Player } from "@lottiefiles/react-lottie-player";
 import toast, { Toaster } from "react-hot-toast";
 import validateInputs from "../../utils/Login/validateInputs";
+import ButtonAzul from "../../components/Buttons/ButtonAzul";
 
 const initialState = {
   email: "",
@@ -103,7 +103,7 @@ const Login = () => {
 
             <DivForgotPassword textA="Forgot Password?" />
 
-            <ButtonLogin textSpan="Login" onActionForm={handleActionForm} />
+            <ButtonAzul textSpan="Login" onActionForm={handleActionForm} />
             <ButtonRegister
               textP="Not registered yet"
               textSpan="Register now"

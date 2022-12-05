@@ -26,12 +26,6 @@ export const InputForm = styled.input`
     `}
 `;
 
-export const ButtonLoginAzul = styled.button`
-  ${tw`
-        w-full py-2 font-medium text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg border-indigo-500 hover:shadow inline-flex space-x-2 items-center justify-center
-    `}
-`;
-
 export const ButtonAutenticarStyle = styled.button`
   ${tw`
         w-full text-center py-2 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150
