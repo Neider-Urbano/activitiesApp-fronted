@@ -1,15 +1,15 @@
-import React from 'react'
-import { ButtonRegisterA } from '../../style-components/login/Components'
+import React from "react";
+import { ButtonRegisterA } from "../../style-components/login/Components";
 
-const ButtonRegister = ({textP, textSpan}) => {
+const ButtonRegister = ({ textP, textSpan, href }) => {
   return (
     <p className="text-center">
-        {textP}
-        <ButtonRegisterA to="/register">
-            <span>{textSpan}</span>
-        </ButtonRegisterA>
+      {textP}
+      <ButtonRegisterA to={`/${href}`}>
+        <span>{textSpan}</span>
+      </ButtonRegisterA>
     </p>
-  )
-}
+  );
+};
 
-export default ButtonRegister
+export default ButtonRegister;
