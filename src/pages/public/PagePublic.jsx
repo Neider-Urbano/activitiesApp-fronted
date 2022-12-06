@@ -7,7 +7,9 @@ const PagePublic=()=>{
         <div class="h-[100vh] bg-[#EAF4FF] rounded-t-3xl">
             <NavBar/>
             <TextInicio/>
-
+               <div>
+                    <p>Hola</p>        
+                </div>
         </div>
     )
 };
