@@ -15,7 +15,8 @@ const NavBar=()=> {
                 <StyledItems>  
                     <ItemNavBar nombreDelItem="Home"/>
                     <ItemNavBar nombreDelItem="Sobre nosotros"/>
-                    <ItemNavBar nombreDelItem="Contactenos"/>  
+                    <ItemNavBar nombreDelItem="Contactenos"/>
+                    <h1>Hola mundo desde el navbar</h1>  
                 </StyledItems>
                 <StyledContenedorDeIconos>
                     <IconoNavBar icono={search}/>
