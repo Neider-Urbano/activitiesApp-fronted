@@ -12,6 +12,15 @@ const PagePublic=()=>{
             <NavBar/>
             <TextInicio/>
 
+
+
+
+
+
+
+
+            <p>Hola</p>
+
         </div>
     )
 };
