@@ -1,45 +1,14 @@
 import React from "react";
 import NavBar from "../../containers/menu/NavBar";
-
-
-
-
-import TextInicio from "../../components/Menu/TextInicio"
-
-const a=10;
-const b=20;
+import InterfazDelFondo from "../../containers/menu/IntefazDelFondo";
+import { StyledPagePublic} from "../../style-components/public/Components";
 
 const PagePublic=()=>{
-    const b=50;
-    
-    
-    
-    
-    
-    
-    
-    
-    function a(){
-        console.log("hola") 
-    }
     return(
-        <div class="h-[100vh] bg-[#EAF4FF] rounded-t-3xl">
-            <TextInicio/>
-
-
-
-
-
-
-
-
-            <p>Hola</p>
-
-               <div>
-                    <p>Hola</p>        
-                </div>
-            <p>hola</p>
-        </div>
+        <StyledPagePublic>
+                <NavBar/>
+                <InterfazDelFondo/>
+        </StyledPagePublic>
     )
 };
 export default PagePublic;
