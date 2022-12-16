@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ItemsNavBar=({nombreDelItem})=> {
     return(
         <div>
-            <ul class="inline mt-2 border border-gray-100 rounded-lg  md:mt-0 md:text-sm md:font-medium md:border-0">
+            <ul className="mt-2 border border-gray-100 rounded-lg md:text-md lg:text-xl md:mt-0 md:font-bold md:border-0">
                 <li>
-                    <a href={nombreDelItem} class="p-3 mx-10 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">{nombreDelItem}</a>
+                    <Link to={nombreDelItem} className="p-3 rounded hover:underline text md:bg-transparent md:text-white md:p-0 md:hover:text-gray-800 md:mx-10 lg:mx-20" aria-current="page">{nombreDelItem}</Link>
                 </li>
             </ul>
         </div>
