@@ -1,11 +1,12 @@
 import React from "react";
-import Logotipo from "../../assets/images/logo.png"
+import Logotipo from "../../assets/images/public/logo.png"
+import { ContenedorStyledLogoAgendav,StyledImagenLogo } from "../../style-components/public/Components";
 
 const Logo=()=> {
     return(
-        <div>
-            <img src={Logotipo} className="h-[5vh] rounded-tl-full ml-2 md:h-[7vh]" alt="logo agendav"/>
-        </div>
+        <ContenedorStyledLogoAgendav>
+            <StyledImagenLogo src={Logotipo} alt="logo agendav"/>
+        </ContenedorStyledLogoAgendav>
     )
 };
 export default Logo;

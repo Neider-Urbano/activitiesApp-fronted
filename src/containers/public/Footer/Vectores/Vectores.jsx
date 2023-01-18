@@ -1,10 +1,10 @@
 import React from "react";
-import LogoEmpresa from "../../../assets/images/neel.png"
+import logo from "../../../../assets/images/public/logoDefinitivo2.gif"
 
 export const VectorLogo=()=> {
     return(
-        <div className=" w-9 h-8 bg-slate-700 rounded-full">
-            <img src={LogoEmpresa}></img>
+        <div className=" w-9 h-8 bg-slate-700 rounded-full mb-2">
+            <img src={logo}></img>
         </div>      
     )
 };

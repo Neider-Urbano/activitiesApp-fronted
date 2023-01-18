@@ -1,14 +1,18 @@
 import React from "react";
-import NavBar from "../../containers/menu/NavBar";
-import InterfazDelFondo from "../../containers/menu/IntefazDelFondo";
+import NavBar from "../../containers/public/NavBar";
+import InterfazDelFondo from "../../containers/public/IntefazDelFondo";
 import { StyledPagePublic} from "../../style-components/public/Components";
+import Footer from "../../containers/public/Footer/Footer";
 
 const PagePublic=()=>{
     return(
-        <StyledPagePublic>
+        <div className="bg-black" >
                 <NavBar/>
+            <StyledPagePublic>
                 <InterfazDelFondo/>
-        </StyledPagePublic>
+                <Footer/>
+            </StyledPagePublic>
+        </div>
     )
 };
 export default PagePublic;
