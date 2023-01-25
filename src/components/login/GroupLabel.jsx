@@ -1,7 +1,7 @@
 import React from "react";
 import { InputForm } from "../../style-components/login/Components";
 
-const Label = ({ placeholder, type, valueData, onInput, error, name }) => {
+const Label = ({ placeholder, type, valueData, onInput, error, name, darkTheme }) => {
   return (
     <label htmlFor={name} className="w-full">
       <InputForm
@@ -12,6 +12,7 @@ const Label = ({ placeholder, type, valueData, onInput, error, name }) => {
         className={`${error ? "border-red-300" : "border-slate-200"}`}
         value={valueData}
         onChange={(e) => onInput(e)}
+        darkTheme={darkTheme}
       />
     </label>
   );

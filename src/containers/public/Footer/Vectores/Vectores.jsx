@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../../assets/images/public/logoDefinitivo2.gif"
+import logo from "../../../../assets/images/public/logoApp2.png"
 
 export const VectorLogo=()=> {
     return(
