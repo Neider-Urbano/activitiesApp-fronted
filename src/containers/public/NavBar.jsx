@@ -1,8 +1,8 @@
 import React from "react";
-import {ItemNavBar,IconoNavBar,Logo} from "../../components/Menu/index.js"
+import {ItemNavBar,IconoNavBar,Logo} from "../../components/Menu/index.js";
 import { StyledNav,StyledContenedor,StyledItems,ContenedorDeItem } from "../../style-components/public/Components";
-import search from "../../assets/icons/search.svg"
-import menu from "../../assets/icons/menu.svg"
+import search from "../../assets/icons/search.svg";
+import menu from "../../assets/icons/menu.svg";
 
 const NavBar=()=> {
     return(

@@ -70,7 +70,7 @@ export const StyledImagenLogo=styled.img`
 /*--------------------------------------------------------------------Interfaz del cuerpo---------------------------------------------------------------------*/
 export const CapaExternaInterfaz=styled.div`
     ${tw`
-    flex h-[90vh] w-screen md:h-[80vh] lg:h-[65vh] items-center xl:h-screen 
+    flex h-[90vh] w-screen md:h-[80vh] lg:h-[65vh] items-center xl:h-screen  bg-no-repeat bg-contain bg-fixed bg-[url('https://raw.githubusercontent.com/emanuel3288/colarg/master/Frame%201PortadaAgendav.png')] xl:bg-cover
     `}
 `;
 export const ContenedorSinFooter=styled.div`
@@ -229,6 +229,7 @@ export const ContenedorDeCards=styled.div`
     }
 `
 
+
 //Formulario---------------------------------------------------------------------------------------------------------------------------------------------------
 export const ContenedorDeFormulario=styled.div`
     ${tw`
@@ -242,60 +243,72 @@ export const ContenedorFirstAndLastName=styled.div`
     `
     }
 `
-//Input and label FIRST NAME-------------------------------------
-export const LabelFirstName=styled.label`
+//Input and label FormMessage-------------------------------------
+export const LabelFormMessage=styled.label`
     ${tw`
     block mb-2 text-sm font-medium text-gray-300 dark:text-white    `
     }
 `
-export const InputFirstName=styled.input`
+export const InputFormMessage=styled.input`
     ${tw`
     bg-gray-700 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500    `
     }
 `
-//Input and label LAST NAME-------------------------------------
-export const LabelLastName=styled.label`
+//Textarea del form message
+export const ContenedorTextarea=styled.div`
     ${tw`
-    block mb-2 text-sm font-medium text-gray-300 dark:text-white
-    `
-    }
+    
+    `}
 `
-export const InputLastName=styled.input`
+export const LabelTextarea=styled.label`
     ${tw`
-    bg-gray-700 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
-    `
-    }
-`
-//Input and label SUBJECT--------------------------------
-export const LabelSubject=styled.label`
+        block mb-2 text-sm font-medium text-gray-300 dark:text-white
+    `}
+` 
+export const InputTextarea=styled.textarea`
     ${tw`
-    block mb-2 text-sm font-medium text-gray-300 dark:text-white
-    `
-    }  
-`
-export const InputSubject=styled.input`
-    ${tw`
-    bg-gray-700 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
-    `
-    }  
-`
-//Input and label EMAIL-------------------------------
-export const LabelEmail=styled.label`
-    ${tw`   
-    block mb-2 text-sm font-medium text-gray-300 dark:text-white
-    `
-    }  
-`
-export const InputEmail=styled.input`
-    ${tw`
-    bg-gray-700 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
-    `
-    }
-`
+        block p-2.5 w-full text-sm text-gray-900 bg-gray-700 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+    `}
+` 
+
 //BOTON SUBMIT--------------------------------------
 export const Boton=styled.button`
     ${tw`
     text-white bg-blue-700 mt-2 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
     `
     }  
+`
+
+//-------------------------------------------------------------Card contact------------------------------------------------------------------------------------
+
+export const ContenedorExternoCard=styled.div`
+    ${tw`
+    w-full md:w-60 max-w-sm border rounded-lg shadow-md bg-gray-700 border-gray-600
+    `}
+`
+export const ContenedorInternoCard=styled.div`
+    ${tw`
+    flex flex-col items-center pt-5 pb-5 md:pb-10
+    `}
+`
+
+export const ImageCard=styled.img`
+    ${tw`
+    w-24 h-24 mb-3 rounded-full shadow-lg md:w-40 md:h-40
+    `}
+`
+export const TittleCard=styled.h5`
+    ${tw`
+    mb-1 text-[13px] md:text-[15px] lg:text-[17px] font-medium text-white text-center
+    `}
+`
+export const TextCard=styled.span`
+    ${tw`
+    text-[10px] md:text-[13px] lg:text-[16px] text-gray-500 dark:text-gray-300
+    `}
+`
+export const ContenedorBotonesCard=styled.div`
+    ${tw`
+    hidden md:flex mt-4 space-x-3 md:mt-6
+    `}
 `

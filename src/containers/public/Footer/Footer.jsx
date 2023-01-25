@@ -8,7 +8,7 @@ import {VectorLogo,VectorFacebook,VectorInstagram,VectorYoutube} from "./Vectore
 import CardAboutUs from "../../../components/Menu/CardAboutUs";
 import ema from "../../../assets/images/public/ema.png"
 import neider from "../../../assets/images/public/neider.png"
-import FormMessage from "../../../components/FormMessage/FormMessage.jsx";
+import {FormMessage} from "../../../components/FormMessage/FormMessage.jsx";
 
 const Footer=()=> {
     return(

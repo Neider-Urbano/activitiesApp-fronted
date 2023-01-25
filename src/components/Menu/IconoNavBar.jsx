@@ -1,6 +1,5 @@
 import React from "react";
-import {ContenedorDeIconoNav,IconoDelNav} from "../../style-components/public/Components"
-
+import {ContenedorDeIconoNav,IconoDelNav} from "../../style-components/public/Components";
 
 const IconoNavBar=({icono})=> {
     return(
