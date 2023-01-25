@@ -1,7 +1,8 @@
 import React from "react";
 import imgRegister from "../../assets/images/register3.png";
 import Register from "../../containers/register/Register";
-export const PageRegister = () => {
+
+const PageRegister = () => {
   return (
     <main className="antialiased bg-slate-200 flex h-screen">
       <div className=" bg-white p-16 md:p-8 lg:p-20 w-screen md:w-auto lg:w-2/5">
@@ -14,3 +15,4 @@ export const PageRegister = () => {
     </main>
   );
 };
+export default PageRegister;
