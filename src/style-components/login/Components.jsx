@@ -4,33 +4,30 @@ import { Link } from "react-router-dom";
 
 export const Main = styled.main`
   ${tw`
-        antialiased bg-slate-200
+      overflow-auto h-[100vh]
     `}
 `;
 
 export const DivContenedor = styled.div`
   ${tw`
-        max-w-lg bg-white py-8 px-8 md:px-10 rounded-xl shadow shadow-slate-300 w-[330px] md:w-[380px]
+    flex justify-center flex-col bg-none w-[270px] md:w-[335px]
     `}
 `;
 
 export const Form = styled.form`
   ${tw`
-        mt-5 flex flex-col space-y-5
+        mt-3 flex flex-col space-y-3
     `}
 `;
 
-export const InputForm = styled.input`
-  ${tw`
-        w-full py-2 border rounded-lg px-3 focus:outline-none focus:border-slate-500 hover:shadow
-    `}
-`;
+export const InputForm = styled.input(({ darkTheme }) => [
+  tw`w-full py-2 border rounded-lg px-3 focus:outline-none focus:border-slate-300 hover:shadow`,
+  darkTheme && tw`bg-transparent text-slate-200`]);
 
-export const ButtonAutenticarStyle = styled.button`
-  ${tw`
-        w-full text-center py-2 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150
-    `}
-`;
+export const ButtonAutenticarStyle = styled.button(({ darkTheme }) => [
+  tw`w-full text-center py-2 px-3 border flex space-x-2 items-center justify-center border-slate-200 rounded-lg text-slate-700 hover:border-slate-400 hover:text-slate-900 hover:shadow transition duration-150`,
+    darkTheme && tw`text-slate-300 border-slate-300 hover:border-slate-200 hover:text-slate-200`
+  ]);
 
 export const ContenedorForgotPassword = styled.div`
   ${tw`
@@ -40,6 +37,6 @@ export const ContenedorForgotPassword = styled.div`
 
 export const ButtonRegisterA = styled(Link)`
   ${tw`
-        text-indigo-600 font-medium inline-flex space-x-1 items-center pl-[5px]
+        text-indigo-600 font-normal items-center pl-[5px] hover:font-medium
     `}
 `;

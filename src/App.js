@@ -1,8 +1,13 @@
+import DarkProvider from './context/DarkContext';
 import { Router } from './routes/Router';
 
+
 function App() {
+
   return (
-    <Router />
+    <DarkProvider>
+      <Router />
+    </DarkProvider>
   );
 }
 
