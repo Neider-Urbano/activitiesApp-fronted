@@ -5,11 +5,9 @@ import { ContenedorForgotPassword } from "../../style-components/login/Component
 const DivForgotPassword = ({ textA }) => {
   return (
     <ContenedorForgotPassword>
-      <div>
-        <Link to="/forgotpassword" className="font-medium text-indigo-600">
+        <Link to="/forgotpassword" className="text-indigo-600 font-normal text-[15.5px] hover:font-medium">
           {textA}
         </Link>
-      </div>
     </ContenedorForgotPassword>
   );
 };

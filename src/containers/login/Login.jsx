@@ -1,86 +1,49 @@
-import React, { useState } from "react";
-import {
-  Main,
-  DivContenedor,
-  Form,
-} from "../../style-components/login/Components";
-import {
-  GroupLabel,
-  ButtonAutenticar,
-  ButtonRegister,
-  DivForgotPassword,
-} from "../../components/login/index";
-import { Player } from "@lottiefiles/react-lottie-player";
-import toast, { Toaster } from "react-hot-toast";
-import validateInputs from "../../utils/Login/validateInputs";
+import React from "react";
+import { Main, DivContenedor, Form} from "../../style-components/login/Components";
+import {GroupLabel,ButtonAutenticar,ButtonRegister,DivForgotPassword,} from "../../components/login/index";
+import { Toaster } from "react-hot-toast";
 import ButtonAzul from "../../components/Buttons/ButtonAzul";
-
-const initialState = {
-  email: "",
-  password: "",
-};
+import imgLogo from "../../assets/images/public/logoApp2.png"
+import useLogin from "../../hooks/useLogin";
+import useDarkProvider from "../../hooks/useDarkTheme";
+import { OptionPage } from "../../components/optionPage/OptionPage";
 
 const Login = () => {
-  const [dataUser, setDataUser] = useState(initialState);
-  const [errors, setErrors] = useState("");
-  const [intentosFallidos, setIntentosFallidos] = useState(0);
-  const notify = (error) => toast.error(error);
-
-  const handleInput = (e) => {
-    const { value, name } = e.target;
-    setDataUser({
-      ...dataUser,
-      [name]: value,
-    });
-    setErrors(validateInputs(name, value));
-  };
-
-  const handleActionForm = (e) => {
-    e.preventDefault();
-    e.target.disabled = true;
-    var errorEncontrado = "";
-    Object.keys(dataUser).map((key) => {
-      if (errorEncontrado === "")
-        errorEncontrado = validateInputs(key, dataUser[key]);
-    });
-
-    if (intentosFallidos + 1 > 4) {
-      errorEncontrado = "Has intentado ingresar varias veces";
-    } else {
-      e.target.disabled = false;
-    }
-
-    if (errorEncontrado === "") {
-      setDataUser(initialState);
-    } else {
-      setErrors(errorEncontrado);
-      toast.remove();
-      notify(errorEncontrado);
-      setIntentosFallidos(intentosFallidos + 1);
-    }
-  };
+  const [states, actions]=useLogin()
+  const {dataUser}=states
+  const {errors}=states
+  const {handleActionForm}=actions
+  const {handleInput}=actions
+  const [statesOP,actionsOP]=useDarkProvider() 
+  const {darkTheme,textIdioma}=statesOP.optionPage;
 
   return (
     <Main>
-      <div className="flex justify-center items-center h-[100vh]">
+       <div className={`flex justify-center items-center min-w-[320px] min-h-[480px] h-full flex-col ${darkTheme ? "darkTheme": "divLogin"}`}>
+        <OptionPage darkTheme={darkTheme} textIdioma={textIdioma} actionsOP={actionsOP}/>
         <DivContenedor>
-          <h1 className="text-xl font-medium text-slate-900">Login</h1>
+          <div className="flex flex-col items-center">
+            <img src={imgLogo} alt="logo app" className="h-[45px] w-[90px]"/>          
+            <h1 className={`font-medium text-lg ${darkTheme ? "text-indigo-500" : "text-slate-700"}`}>Activities App</h1>
+          </div>
 
-          <div className="flex justify-between my-5">
+          <div className="flex justify-between mt-5 md:mt-7 mb-3">
             <ButtonAutenticar
               urlImg="https://www.svgrepo.com/show/355037/google.svg"
               textSpan="Google"
               nameAut="google"
+              darkTheme={darkTheme}
             />
             <ButtonAutenticar
               urlImg="https://www.svgrepo.com/show/158427/facebook.svg"
               textSpan="Facebook"
               nameAut="facebook"
+              darkTheme={darkTheme}
             />
           </div>
 
-          <div className="flex justify-between items-center">
-            <hr className="w-[45%]" /> o <hr className="w-[45%]" />
+          <div className={`flex justify-between items-center ${darkTheme ? "text-slate-300" : "text-slate-700"}`}>
+            <hr className="w-[44%]" /> o <hr className="w-[44%]" />
           </div>
 
           <Form>
@@ -91,6 +54,7 @@ const Login = () => {
               valueData={dataUser.email}
               onInput={handleInput}
               error={errors.includes("email")}
+              darkTheme={darkTheme}
             />
             <GroupLabel
               type="password"
@@ -99,30 +63,22 @@ const Login = () => {
               valueData={dataUser.password}
               onInput={handleInput}
               error={errors.includes("password")}
+              darkTheme={darkTheme}
             />
 
-            <DivForgotPassword textA="Forgot Password?" />
+            <DivForgotPassword textA="Forgot password?" />
+
 
             <ButtonAzul textSpan="Login" onActionForm={handleActionForm} />
+
             <ButtonRegister
               textP="Not registered yet"
-              textSpan="Register now"
+              textSpan="register now"
               href="register"
+              darkTheme={darkTheme}
             />
           </Form>
         </DivContenedor>
-
-        <div
-          className="hidden md:block ml-[20px] lg:ml-[50px] w-[30%]"
-          key="loadImg"
-        >
-          <Player
-            src="https://assets7.lottiefiles.com/packages/lf20_tpnk0wok.json"
-            className="player"
-            loop
-            autoplay
-          />
-        </div>
       </div>
 
       <Toaster position="bottom-center" reverseOrder={false} />
