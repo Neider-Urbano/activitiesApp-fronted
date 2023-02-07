@@ -15,18 +15,18 @@ export const StyledNav=styled.div`
 `;
 export const StyledContenedor=styled.div`
     ${tw`
-    flex h-full w-full justify-between border-8 border-red-700
+    flex h-full w-full justify-between 
     `}
 `;
 export const StyledItems=styled.div`
     ${tw`
-    hidden md:flex items-center border-8 border-orange-800
+    hidden md:flex items-center 
     `}
 `;
 //Styled Item--------------------------------------------------------------------------------------------------------------------------------------------------- 
 export const ContenedorDeItemNav=styled.div`
     ${tw` 
-    border-8 border-amber-600
+    
     `}
 `;
 export const UlItemNav=styled.ul`
@@ -75,12 +75,12 @@ export const CapaExternaInterfaz=styled.div`
 `;
 export const ContenedorSinFooter=styled.div`
     ${tw`
-    flex w-full justify-center bg-gray-200 opacity-70 lg:opacity-90 mt-[30%] md:mt-[35%] lg:mt-[5%]
+    flex w-full justify-center bg-gray-200 opacity-70 lg:opacity-90 mt-[30%] md:mt-[35%] lg:mt-[5%] border-8 border-red-600
     `}
 `;
 export const ContenedorInteractivo=styled.div`
     ${tw`
-    flex flex-col mx-5 md:h-[60%] md:w-[70%] lg:h-[80%] lg:w-[80%] space-y-9 lg:space-y-7
+    flex flex-col mx-5 md:h-[60%] md:w-[70%] lg:h-[80%] lg:w-[80%] space-y-9 lg:space-y-7 
     `}
 `;
 //Texto interfaz
@@ -103,7 +103,7 @@ export const StyledParrafo=styled.div`
 `;
 export const Parrafo=styled.p`
     ${tw`
-    text-[10px] md:text-[13px] lg:text-[16px] font-normal text-gray-500 lg:text-gray-700
+    text-[10px] md:text-[13px] lg:text-[16px] font-normal text-gray-500 lg:text-gray-700 
     `}
 `;
 //Botones Login and register interfaz--------------------------------------
@@ -139,19 +139,19 @@ export const StyledImagenPrincipal=styled.img`
 /*----------------------------------------------------------------Footer--------------------------------------------------------------------------------------*/
 export const CapaExternaFooter=styled.div`
     ${tw`
-    flex w-screen mb-2 border-0 
+    flex w-screen mb-2 
     `
     }
 `
 export const ContenedorDelFooter=styled.div`
     ${tw`
-    container flex w-full justify-center bg-black 
+    container justify-center bg-black 
     `
     }
 `
 export const ContenedorInterfazFooter=styled.div`
     ${tw`
-    flex flex-col mt-2 ml-0 md:mt-7 lg:mt-10 w-full px-4 text-white
+    flex flex-col mt-2 ml-0 md:mt-7 lg:mt-10 w-full px-4 text-white  
     `
     }
 `
@@ -179,22 +179,23 @@ export const TextoFooter=styled.p`
     `
     }
 `
+//BOTON ABOUT US FOOTER---------------------------------------
 export const ContenedorBotonFooter=styled.div`
     ${tw`
-    hidden md:flex md:w-44 md:pt-0
+    hidden md:flex md:w-44 md:pt-0 
     `
     }
 `
-//BOTON ABOUT US FOOTER---------------------------------------
 export const BotonFooter=styled.button`
     ${tw`
     hidden w-full text-[11px] md:text-[15px] lg:text-[20px] md:flex md:items-center md:bg-red-600 md:justify-center md:text-center md:rounded-lg md:shadow md:px-10 md:py-3 transition duration-500 md:hover:bg-red-400 
     `
     }
 `
+/*----------------------------------------------------------NavBar del Footer-------------------------------------------------------------------------------*/
 export const ContenedorNavBarFooter=styled.div`
     ${tw`
-    flex flex-col mt-4 md:mt-5 lg:mt-7
+    flex flex-col mt-4 md:mt-5 lg:mt-7 
     `
     }
 `
@@ -222,18 +223,10 @@ export const LineaHorizontalGris=styled.hr`
     `
     }
 `
-export const ContenedorDeCards=styled.div`
-    ${tw`
-    flex space-x-2 md:space-x-4 lg:space-x-6 justify-center mb-[1%] mt-[1%] md:mt-[9%] 
-    `
-    }
-`
-
-
 //Formulario---------------------------------------------------------------------------------------------------------------------------------------------------
 export const ContenedorDeFormulario=styled.div`
     ${tw`
-    container
+    container 
     `
     }
 `
@@ -280,10 +273,15 @@ export const Boton=styled.button`
 `
 
 //-------------------------------------------------------------Card contact------------------------------------------------------------------------------------
-
+export const ContenedorDeCards=styled.div`
+    ${tw`
+    flex space-x-2 md:space-x-4 lg:space-x-6 justify-center mb-[1%] mt-[1%] md:mt-[9%] 
+    `
+    }
+`
 export const ContenedorExternoCard=styled.div`
     ${tw`
-    w-full md:w-60 max-w-sm border rounded-lg shadow-md bg-gray-700 border-gray-600
+    w-full md:w-60 max-w-sm border rounded-lg shadow-md bg-gray-700 border-gray-600 
     `}
 `
 export const ContenedorInternoCard=styled.div`

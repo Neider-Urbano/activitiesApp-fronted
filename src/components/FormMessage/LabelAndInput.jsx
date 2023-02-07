@@ -1,11 +1,11 @@
 import React from "react"
 import { LabelFormMessage,InputFormMessage} from "../../style-components/public/Components"
 
-const LabelInput=({idLabelInput,typeInput,placeHolderInput})=>{
+const LabelInput=({textoDelInput,nameLabel,idLabelInput,typeInput,placeHolderInput})=>{
     return(
         <div>
-            <LabelFormMessage htmlFor={idLabelInput}>Nombre</LabelFormMessage>
-            <InputFormMessage type={typeInput} id={idLabelInput} placeholder={placeHolderInput} required/>
+            <LabelFormMessage htmlFor={idLabelInput}>{nameLabel}</LabelFormMessage>
+            <InputFormMessage type={typeInput} id={idLabelInput} placeholder={placeHolderInput} required>{textoDelInput}</InputFormMessage>
         </div>
         )
 }

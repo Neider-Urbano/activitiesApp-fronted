@@ -59,18 +59,20 @@ const Footer=()=> {
                             </h3>
                         </p>
                         <ContenedorDeCards>
-                            <CardAboutUs imageCard={ema} nombre="Emanuel" apellido="carballal"/>
-                            <CardAboutUs imageCard={neider} nombre="Neider" apellido="Urbano"/>
+                            <CardAboutUs id="#formularioEmanuel" imageCard={ema} nombre="Emanuel" apellido="Carballal"/>
+                            <CardAboutUs id="#formularioNeider"  imageCard={neider} nombre="Neider" apellido="Urbano"/>
                         </ContenedorDeCards>
                     </div>
+
                     <div className="mx-1 mt-10 h-5/6 pt-5 px-2 mb-2 bg-gray-800 rounded-lg" id="contact">
                         <div className="mb-5">
-                            <h1 className="mb-5 text-[13px] md:text-[25px] lg:text-[30px] text-rose-600">Contact</h1>
-                            <h2 className="text-gray-200 text-[11px] md:text-[20px] lg:text-[23px]">Formulario de contacto</h2>
+                            <h1 className="mb-5 text-[13px] md:text-[25px] lg:text-[30px] text-rose-600" id="formularioEmanuel">Contact</h1>
+                            <h2 className="text-gray-200 text-[11px] md:text-[20px] lg:text-[23px]" id="formularioNeider">Formulario de contacto</h2>
                             <hr className="md:border-2 border-gray-600"></hr>
                         </div>
                         <FormMessage/>
                     </div>    
+                
                 </ContenedorInterfazFooter>
             </ContenedorDelFooter>
         </CapaExternaFooter>
