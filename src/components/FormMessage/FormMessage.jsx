@@ -7,16 +7,16 @@ export const FormMessage=()=> {
         <ContenedorDeFormulario>
             <form>
                 <ContenedorFirstAndLastName>
-                    <LabelAndInput idLabelInput={"first_name"} typeInput="text" placeHolderInput="juan" required>nombre</LabelAndInput>
-                    <LabelAndInput idLabelInput={"last_name"} typeInput="text" placeHolderInput="Castro" required>Apellido</LabelAndInput>
-                    <LabelAndInput idLabelInput={"subjetct"} typeInput="tel" placeHolderInput="asunto..." required>Asunto</LabelAndInput>
-                    <LabelAndInput idLabelInput={"email"} typeInput="text" placeHolderInput="johnDoe@gmail.com" required>Correo</LabelAndInput>
+                    <LabelAndInput nameLabel="nombre" idLabelInput={"first_name"} typeInput="text" placeHolderInput="juan" required/>
+                    <LabelAndInput nameLabel="Apellido" idLabelInput={"last_name"} typeInput="text" placeHolderInput="Castro" required/>
+                    <LabelAndInput nameLabel="Asunto" idLabelInput={"subjetct"} typeInput="tel" placeHolderInput="asunto..." required/>
+                    <LabelAndInput nameLabel="Correo" idLabelInput={"email"} typeInput="text" placeHolderInput="johnDoe@gmail.com" required/>
                 </ContenedorFirstAndLastName>
                 <ContenedorTextarea>
                     <LabelTextarea htmlFor="message">Mensaje</LabelTextarea>
                     <InputTextarea id="message" rows="4" placeholder="mensaje..."></InputTextarea>
                 </ContenedorTextarea>
-                <Boton type="submit" >Enviar</Boton>
+                <Boton type="submit">Enviar</Boton>
             </form>
         </ContenedorDeFormulario>
     )

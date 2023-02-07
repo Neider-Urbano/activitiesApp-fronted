@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.App {
+    display:flex;
+    background-color:#154397;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
 
 body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /*ojo con el display arreglar problema*/
 }
 
 .divLogin{
