@@ -2,24 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.divLogin{
-    background: linear-gradient(45deg, transparent 49%, #EEEEEE 49% 51%, transparent 51%) , linear-gradient(-45deg, transparent 49%, #EEEEEE 49% 51%, transparent 51%);
-    background-size: 2em 2em;
-    background-color: #ffffff;
-    opacity: 1;
+body {
+  min-width: 340px;
+  height: 100vh;
 }
 
-.darkTheme{
-    background: linear-gradient(45deg, transparent 49%, #191A19 49% 51%, transparent 51%) , linear-gradient(-45deg, transparent 49%, #191A19 49% 51%, transparent 51%);
-    background-size: 2em 2em;
-    background-color: #151515;
-    opacity: 1
+.divLogin {
+  background: linear-gradient(
+      45deg,
+      transparent 49%,
+      #eeeeee 49% 51%,
+      transparent 51%
+    ),
+    linear-gradient(-45deg, transparent 49%, #eeeeee 49% 51%, transparent 51%);
+  background-size: 2em 2em;
+  background-color: #ffffff;
+  opacity: 1;
 }
 
+.darkTheme {
+  background: linear-gradient(
+      45deg,
+      transparent 49%,
+      #191a19 49% 51%,
+      transparent 51%
+    ),
+    linear-gradient(-45deg, transparent 49%, #191a19 49% 51%, transparent 51%);
+  background-size: 2em 2em;
+  background-color: #151515;
+  opacity: 1;
+}

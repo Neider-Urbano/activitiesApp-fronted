@@ -1,9 +1,7 @@
 import React from "react";
-import Footer from "../../containers/public/Footer/Footer.jsx";
+import { Private } from "../../containers/private/Private.jsx";
 
-const PagePrivate=()=> {
-    return(
-        <Footer/>
-    )
+const PagePrivate = () => {
+  return <Private />;
 };
 export default PagePrivate;

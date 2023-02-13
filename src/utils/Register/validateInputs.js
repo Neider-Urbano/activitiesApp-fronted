@@ -16,9 +16,9 @@ function validateInputs(key, value, dataUser) {
     } else if (value.length < 7) {
       error = key + " is too short";
     }
-  } else if (key === "passwordconfirm" && value != dataUser.password) {
+  } else if (key === "passwordconfirm" && value !== dataUser.password) {
     error = "different passwords";
-  } else if (key === "email" && validator.isEmail(value) == false) {
+  } else if (key === "email" && validator.isEmail(value) === false) {
     error = key + " is invalid";
   }
   return error;

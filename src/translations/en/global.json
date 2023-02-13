@@ -1,0 +1,42 @@
+{
+    "login":{
+        "login": "Login",
+        "forgot-password": "Forgot your password?",
+        "not-registered-yet":"Not registered yet,",
+        "register-now":"register now",
+        "o": "or"
+    },
+    "errors":{
+        "email-is-required":"Email is required",
+        "email-is-invalid":"Email is invalid",
+        "password-is-required":"Password is required",
+        "password-is-too-short":"Password is too short",
+        "tried-to-log-in-multiple-times":"Tried to log in multiple times",
+        "registered-account":"Registered account",
+        "firstname-is-required":"First name is required",
+        "firstname-is-too-short":"First name is too short",
+        "lastname-is-required":"Last name is required",
+        "lastname-is-too-short":"Last name is too short",
+        "password,-at-least-one-letter":"At least one letter",
+        "password,-at-least-one-number":"At least one number",
+        "different-passwords":"Different passwords",
+        "go-back":"Go back"
+    },
+    "forgot-password":{
+        "reset":"Reset",
+        "return-to":"Return to",
+        "message-forgot":"Enter your email address. We'll send you a link to reset your password!",
+        "message-send-link": "We have sent a link to your email"
+    },
+    "register":{
+        "i-have-an-account":"I have an account,",
+        "register-me":"Register me"
+    },
+    "forms":{
+        "enter-email-address": "Enter email address",
+        "enter-your-password": "Enter your password",
+        "confirm-your-password": "Confirm your password",
+        "enter-first-name": "Enter first name",
+        "enter-last-name": "Enter last name"
+    }
+}
