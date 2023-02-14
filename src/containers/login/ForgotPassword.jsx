@@ -1,62 +1,78 @@
 import React from "react";
-import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import ButtonRed from "../../components/Buttons/ButtonRed";
 import { ButtonRegister, GroupLabel } from "../../components/login";
-import validateEmail from "../../utils/Login/validateEmail";
+import { OptionPage } from "../../components/optionPage/OptionPage";
+import useDarkProvider from "../../hooks/useDarkTheme";
+import useForgotPassword from "../../hooks/useForgotPassword";
+import { DivContenedor, Main } from "../../style-components/login/Components";
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState("");
-  const notify = (message, icono) => {
-    toast[icono](message);
-  };
+  const [states, actions] = useForgotPassword();
+  const { email } = states;
+  const { errors } = states;
+  const { handleActionForm } = actions;
+  const { handleInput } = actions;
 
-  const handleInput = (e) => {
-    const { value, name } = e.target;
-    setEmail(value);
-    setErrors(validateEmail(name, value));
-  };
-
-  const handleActionForm = async (e) => {
-    e.preventDefault();
-    e.target.disabled = true;
-    var errorEncontrado = validateEmail("email", email);
-    if (errorEncontrado === "") {
-      setEmail("");
-      toast.remove();
-      notify("We have sent a link to your email", "success");
-    } else {
-      setErrors(errorEncontrado);
-      toast.remove();
-      notify(errorEncontrado, "error");
-    }
-    e.target.disabled = false;
-  };
+  const [statesOP, actionsOP, t] = useDarkProvider();
+  const { darkTheme, textIdioma } = statesOP.optionPage;
 
   return (
-    <form className="w-1/2 md:w-2/5 lg:w-1/4">
-      <div className="flex flex-col space-y-5">
-        <h1 className="text-center font-medium">Forgot Your Password?</h1>
-        <p className="text-justify text-neutral-600">
-          We get it, stuff happens. Just enter your email address below and
-          we'll send you a link to reset your password!
-        </p>
-        <GroupLabel
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          valueData={email}
-          onInput={handleInput}
-          error={errors.includes("email")}
-        />
+    <Main className={`${darkTheme ? "darkTheme" : "divLogin"}`}>
+      <div
+        className={`flex items-center w-[320px] min-w-[320px] min-h-[480px] max-w-[1500px] flex-col pt-[80px]`}
+      >
+        <div className="absolute top-0 left-0 right-0 flex justify-center">
+          <div className="w-full px-[30px] py-[30px] max-w-[1500px]">
+            <OptionPage
+              darkTheme={darkTheme}
+              textIdioma={textIdioma}
+              actionsOP={actionsOP}
+            />
+          </div>
+        </div>
+        <DivContenedor>
+          <form className="flex flex-col space-y-5">
+            <h1
+              className={`text-center font-medium text-slate-800 ${
+                darkTheme && "text-slate-200"
+              }`}
+            >
+              {t("login.forgot-password")}
+            </h1>
+            <p
+              className={`text-justify text-slate-800 ${
+                darkTheme && "text-slate-300"
+              }`}
+            >
+              {t("forgot-password.message-forgot")}
+            </p>
+            <GroupLabel
+              type="email"
+              name="email"
+              placeholder={t("forms.enter-email-address")}
+              valueData={email}
+              onInput={handleInput}
+              error={errors.includes("email")}
+              darkTheme={darkTheme}
+            />
 
-        <ButtonRed textSpan="Reset" onActionForm={handleActionForm} />
+            <ButtonRed
+              textSpan={t("forgot-password.reset")}
+              onActionForm={handleActionForm}
+            />
 
-        <ButtonRegister textP="To return to" textSpan="Login" href="login" />
+            <ButtonRegister
+              textP={t("forgot-password.return-to")}
+              textSpan={t("login.login").toLowerCase()}
+              href="login"
+              darkTheme={darkTheme}
+            />
+          </form>
+        </DivContenedor>
       </div>
       <Toaster position="bottom-center" reverseOrder={false} />
-    </form>
+    </Main>
   );
 };
 
