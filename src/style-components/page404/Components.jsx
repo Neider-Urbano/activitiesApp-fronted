@@ -3,15 +3,14 @@ import tw from "twin.macro";
 
 export const DivPrincipal=styled.div`
     ${tw`
-        h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]
-    `}
+        w-full flex flex-col justify-center items-center
+    `} 
 `;
 
-export const TitleH1=styled.h1`
-    ${tw`
-        text-9xl font-extrabold text-white tracking-widest
-    `}
-`;
+export const TitleH1=styled.h1(({ darkTheme }) => [
+    tw`text-9xl font-extrabold text-slate-700 tracking-widest`,
+    darkTheme && tw`text-white`
+]);
 
 export const DivUno=styled.div`
     ${tw`
@@ -19,20 +18,9 @@ export const DivUno=styled.div`
     `}
 `;
 
-export const AUno=styled.a`
-    ${tw`
-        relative inline-block text-sm font-medium text-[#FF6A3D] active:text-orange-500 focus:outline-none focus:ring
-    `}
-`;
 
-export const SpanUno=styled.span`
-    ${tw`
-        absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0
-    `}
-`;
 
-export const SpanDos=styled.span`
-    ${tw`
-        relative block px-8 py-3 bg-[#1A2238] border border-current
-    `}
-`;
+export const SpanDos=styled.span(({ darkTheme }) => [
+    tw`px-8 py-3 bg-slate-700 mt-5 rounded-full cursor-pointer font-normal text-white hover:font-bold`,
+    darkTheme && tw`bg-[#FF6A3D] text-[#1c1c1c]`
+]);

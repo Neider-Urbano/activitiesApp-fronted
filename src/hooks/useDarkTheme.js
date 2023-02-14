@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from "react-i18next";
+
 
 const initialState = {
     "darkTheme":false,
-    "textIdioma":"En"
+    "textIdioma":"es"
 }
 
 export default function useDarkProvider() {
     const [optionPage, setOptionPage] = useState(initialState);
     const [refresh, setRefresh] = useState(null);
+    const [t,i18n]=useTranslation("global")
 
     const handleDarkTheme=()=>{
         const newObj=optionPage;
@@ -15,11 +18,13 @@ export default function useDarkProvider() {
         setOptionPage(newObj)
         setRefresh(true)
     }
+
     const handleTextIdioma=()=>{
-        var valorTextIdioma="Es"
-        if(optionPage.textIdioma==="Es") valorTextIdioma="En"
+        var valorTextIdioma="es"
+        if(optionPage.textIdioma==="es") valorTextIdioma="en"
         const newObj=optionPage;
         newObj.textIdioma=valorTextIdioma
+        i18n.changeLanguage(valorTextIdioma)
         setOptionPage(newObj)
         setRefresh(true)
     }
@@ -29,7 +34,7 @@ export default function useDarkProvider() {
         for (var property in obj) {
             if(valorResult!==false){
                 if(property==="darkTheme" && typeof obj[property]!=="boolean") valorResult=false
-                else if(property==="textIdioma" && typeof obj[property]!=="string" && (obj[property]!=="En" && obj[property]!=="Es")) valorResult=false
+                else if(property==="textIdioma" && typeof obj[property]!=="string" && (obj[property]!=="en" && obj[property]!=="es")) valorResult=false
             }
         }
         return valorResult;
@@ -51,6 +56,7 @@ export default function useDarkProvider() {
                         const newObj=optionPage;
                         newObj.darkTheme=darkTheme;
                         newObj.textIdioma=textIdioma;
+                        i18n.changeLanguage(textIdioma)
                         setOptionPage(newObj)
                     }
                     setRefresh(false)
@@ -71,7 +77,8 @@ export default function useDarkProvider() {
     },
     {
         handleDarkTheme,
-        handleTextIdioma
-    }
+        handleTextIdioma,
+    },
+    t
   ]
 }
