@@ -38,5 +38,13 @@
         "confirm-your-password": "Confirm your password",
         "enter-first-name": "Enter first name",
         "enter-last-name": "Enter last name"
+    },
+    "interfaceText": {
+        "tittle":"Schedule your activity",
+        "subtitle":"Remembering the activities of the day has never been so easy"
+    },
+    "footer-Text":{
+        "tittle":"Need help? contact us",
+        "text":"We are the number one leading company in the market"
     }
 }

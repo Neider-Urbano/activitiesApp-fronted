@@ -38,5 +38,13 @@
         "confirm-your-password": "Confirme su contraseña",
         "enter-first-name": "Digite su nombre",
         "enter-last-name": "Digite su apellido"
+    },
+    "interfaceText": {
+        "tittle":"Agenda tu actividad",
+        "subtitle":"Recordar las actividades del día nunca había sido tan fácil"
+    },
+    "footer-Text":{
+        "tittle":"Necesitas ayuda? contactanos",
+        "text":"Somos la empresa número uno lider en el mercado"
     }
 }
