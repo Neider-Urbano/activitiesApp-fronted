@@ -1,17 +1,25 @@
 import React from "react";
-import NavBar from "../../containers/public/NavBar";
-import InterfazDelFondo from "../../containers/public/IntefazDelFondo";
-import { StyledPagePublic } from "../../style-components/public/Components";
-import Footer from "../../containers/public/Footer/Footer";
+import Interfaz from "../../containers/public/IntefazDelFondo";
+import FormMessage from "../../components/formMessage/FormMessage";
+import Footer from "../../containers/public/footer/Footer";
+import Cards from "../../containers/public/aboutUs/CardsAboutUs";
 
+import useDarkProvider from "../../hooks/useDarkTheme";
+import { OptionPage } from "../../components/optionPage/OptionPage";
+
+
+/*probando para pasar option page a los distintos componentes de la pagina*/ 
 const PagePublic = () => {
   return (
-    <div className="bg-black">
-      <NavBar />
-      <StyledPagePublic>
-        <InterfazDelFondo />
-        {/* <Footer/> */}
-      </StyledPagePublic>
+    <div>
+      <Interfaz/>
+      <div>
+        <div className="max-h-max w-full pt-1 px-2 bg-gray-900">
+          <Cards/>
+        </div>
+        <FormMessage/>
+        <Footer/>
+      </div>
     </div>
   );
 };

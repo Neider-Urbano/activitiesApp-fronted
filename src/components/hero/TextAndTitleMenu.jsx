@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledTitulo,StyledParrafo,Titulo,Parrafo} from "../../style-components/public/Components";
 
-export const TituloInicio=()=> {
+export const TituloMenu=()=> {
     return(
         <StyledTitulo>
             <Titulo>
@@ -10,7 +10,7 @@ export const TituloInicio=()=> {
         </StyledTitulo>   
     )
 };
-export const TextInicio=()=>{
+export const TextMenu=()=>{
     return(
         <StyledParrafo>
             <Parrafo> 

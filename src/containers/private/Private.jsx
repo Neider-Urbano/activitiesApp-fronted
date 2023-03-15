@@ -6,7 +6,6 @@ import useDarkProvider from "../../hooks/useDarkTheme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
 import { faCookie, faPowerOff } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 import { Dropdown, Sidebar } from "flowbite-react";
 
 export const Private = () => {
