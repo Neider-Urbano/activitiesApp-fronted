@@ -1,5 +1,4 @@
 import React from "react";
-import { ButtonRegister, GroupLabel } from "../../components/login";
 import { Toaster } from "react-hot-toast";
 import ButtonAzul from "../../components/Buttons/ButtonAzul";
 import imgRegister from "../../assets/images/register3.png";
@@ -7,8 +6,9 @@ import { Main } from "../../style-components/login/Components";
 import { OptionPage } from "../../components/optionPage/OptionPage";
 import useRegister from "../../hooks/useRegister";
 import useDarkProvider from "../../hooks/useDarkTheme";
-import { Link } from "react-router-dom";
-import imgLogo from "../../assets/images/public/logoApp2.png";
+import ButtonRegister from "../../components/Buttons/ButtonRegister";
+import LabelPrimary from "../../components/Labels/LabelPrimary";
+import LinkLogoPublic from "../../components/Links/LinkLogoPublic";
 
 const Register = () => {
   const [states, actions] = useRegister();
@@ -35,25 +35,10 @@ const Register = () => {
         </div>
         <div className="flex justify-center items-center">
           <div className="w-full md:w-auto lg:w-2/5 px-[20px] md:pl-[80px] md:pr-[40px]">
-            <Link to="/">
-              <div className="flex flex-col items-center cursor-pointer">
-                <img
-                  src={imgLogo}
-                  alt="logo app"
-                  className="h-[45px] w-[90px]"
-                />
-                <h1
-                  className={`font-medium text-lg ${
-                    darkTheme ? "text-indigo-500" : "text-slate-700"
-                  }`}
-                >
-                  Activities App
-                </h1>
-              </div>
-            </Link>
+            <LinkLogoPublic darkTheme={darkTheme} />
             <form className="my-6 flex flex-col space-y-5">
               <div className="flex space-x-5">
-                <GroupLabel
+                <LabelPrimary
                   type="text"
                   name="firstname"
                   placeholder={t("forms.enter-first-name")}
@@ -62,7 +47,7 @@ const Register = () => {
                   error={errors.includes("firstname")}
                   darkTheme={darkTheme}
                 />
-                <GroupLabel
+                <LabelPrimary
                   type="text"
                   name="lastname"
                   placeholder={t("forms.enter-last-name")}
@@ -73,7 +58,7 @@ const Register = () => {
                 />
               </div>
 
-              <GroupLabel
+              <LabelPrimary
                 type="email"
                 name="email"
                 placeholder={t("forms.enter-email-address")}
@@ -83,7 +68,7 @@ const Register = () => {
                 darkTheme={darkTheme}
               />
 
-              <GroupLabel
+              <LabelPrimary
                 type="password"
                 name="password"
                 placeholder={t("forms.enter-your-password")}
@@ -93,7 +78,7 @@ const Register = () => {
                 darkTheme={darkTheme}
               />
 
-              <GroupLabel
+              <LabelPrimary
                 type="password"
                 name="passwordconfirm"
                 placeholder={t("forms.confirm-your-password")}

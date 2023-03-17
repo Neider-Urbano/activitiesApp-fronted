@@ -7,8 +7,8 @@ import { Tooltip } from "flowbite-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt } from "@fortawesome/free-regular-svg-icons";
 import { TourProvider } from "@reactour/tour";
-import { steps } from "./steps.js";
-import UseTourOpen from "./UseTourOpen";
+import { steps } from "../../components/Tour/steps";
+import UseTourOpen from "../../components/Tour/UseTourOpen";
 
 export const Private = () => {
   const [statesOP, actionsOP, t] = useDarkProvider();
