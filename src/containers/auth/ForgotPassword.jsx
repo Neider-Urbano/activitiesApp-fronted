@@ -1,11 +1,13 @@
 import React from "react";
 import { Toaster } from "react-hot-toast";
 import ButtonRed from "../../components/Buttons/ButtonRed";
-import { ButtonRegister, GroupLabel } from "../../components/login";
+import ButtonRegister from "../../components/Buttons/ButtonRegister";
+import LabelPrimary from "../../components/Labels/LabelPrimary";
 import { OptionPage } from "../../components/optionPage/OptionPage";
 import useDarkProvider from "../../hooks/useDarkTheme";
 import useForgotPassword from "../../hooks/useForgotPassword";
 import { DivContenedor, Main } from "../../style-components/login/Components";
+import LinkLogoPublic from "../../components/Links/LinkLogoPublic";
 
 const ForgotPassword = () => {
   const [states, actions] = useForgotPassword();
@@ -33,14 +35,8 @@ const ForgotPassword = () => {
           </div>
         </div>
         <DivContenedor>
-          <form className="flex flex-col space-y-5">
-            <h1
-              className={`text-center font-medium text-slate-800 ${
-                darkTheme && "text-slate-200"
-              }`}
-            >
-              {t("login.forgot-password")}
-            </h1>
+          <LinkLogoPublic darkTheme={darkTheme} />
+          <form className="flex flex-col space-y-5 mt-7">
             <p
               className={`text-justify text-slate-800 ${
                 darkTheme && "text-slate-300"
@@ -48,7 +44,7 @@ const ForgotPassword = () => {
             >
               {t("forgot-password.message-forgot")}
             </p>
-            <GroupLabel
+            <LabelPrimary
               type="email"
               name="email"
               placeholder={t("forms.enter-email-address")}

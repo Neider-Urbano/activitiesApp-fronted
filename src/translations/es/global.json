@@ -1,50 +1,50 @@
 {
-    "login":{
-        "login": "Iniciar sesión",
-        "forgot-password": "Olvidaste tu contraseña?",        
-        "not-registered-yet":"Aún no estás registrado,",
-        "register-now":"registrate ahora",
-        "o": "o"
-    },
-    "errors":{
-        "email-is-required":"Email es requerido",
-        "email-is-invalid":"Email es invalido",
-        "password-is-required":"Contraseña es requerida",
-        "password-is-too-short":"Contraseña es demasiado corta",
-        "tried-to-log-in-multiple-times":"Has intentado ingresar varias veces",
-        "registered-account":"Cuenta registrada",
-        "firstname-is-required":"Su nombre es requerido",
-        "firstname-is-too-short":"Su nombre es muy corto",
-        "lastname-is-required":"Su apellido es requerido",
-        "lastname-is-too-short":"Su apellido es muy corto",
-        "password,-at-least-one-letter":"Al menos una letra",
-        "password,-at-least-one-number":"Al menos un número",
-        "different-passwords":"Las contraseñas son diferentes",
-        "go-back":"Volver atrás"
-    },
-    "forgot-password":{
-        "reset":"Reestablecer",
-        "return-to":"Retornar a",
-        "message-forgot":"Introduzca su email. ¡Te enviaremos un enlace para restablecer tu contraseña!",
-        "message-send-link": "Hemos enviado un enlace a su email"
-    },
-    "register":{
-        "i-have-an-account":"Tengo una cuenta,",
-        "register-me":"Registrarme"
-    },
-    "forms":{
-        "enter-email-address": "Digite su email",
-        "enter-your-password": "Digite su contraseña",
-        "confirm-your-password": "Confirme su contraseña",
-        "enter-first-name": "Digite su nombre",
-        "enter-last-name": "Digite su apellido"
-    },
-    "interfaceText": {
-        "tittle":"Agenda tu actividad",
-        "subtitle":"Recordar las actividades del día nunca había sido tan fácil"
-    },
-    "footer-Text":{
-        "tittle":"Necesitas ayuda? contactanos",
-        "text":"Somos la empresa número uno lider en el mercado"
-    }
+  "login": {
+    "login": "Iniciar sesión",
+    "forgot-password": "¿Olvidaste tu contraseña?",
+    "not-registered-yet": "Aún no estás registrado,",
+    "register-now": "registrate ahora",
+    "o": "o"
+  },
+  "errors": {
+    "email-is-required": "Email es requerido",
+    "email-is-invalid": "Email es invalido",
+    "password-is-required": "Contraseña es requerida",
+    "password-is-too-short": "Contraseña es demasiado corta",
+    "tried-to-log-in-multiple-times": "Has intentado ingresar varias veces",
+    "registered-account": "Cuenta registrada",
+    "firstname-is-required": "Su nombre es requerido",
+    "firstname-is-too-short": "Su nombre es muy corto",
+    "lastname-is-required": "Su apellido es requerido",
+    "lastname-is-too-short": "Su apellido es muy corto",
+    "password,-at-least-one-letter": "Al menos una letra",
+    "password,-at-least-one-number": "Al menos un número",
+    "different-passwords": "Las contraseñas son diferentes",
+    "go-back": "Volver atrás"
+  },
+  "forgot-password": {
+    "reset": "Reestablecer",
+    "return-to": "Retornar a",
+    "message-forgot": "Introduzca su email. ¡Te enviaremos un enlace para restablecer tu contraseña!",
+    "message-send-link": "Hemos enviado un enlace a su email"
+  },
+  "register": {
+    "i-have-an-account": "Tengo una cuenta,",
+    "register-me": "Registrarme"
+  },
+  "forms": {
+    "enter-email-address": "Digite su email",
+    "enter-your-password": "Digite su contraseña",
+    "confirm-your-password": "Confirme su contraseña",
+    "enter-first-name": "Digite su nombre",
+    "enter-last-name": "Digite su apellido"
+  },
+  "interfaceText": {
+    "tittle": "Agenda tu actividad",
+    "subtitle": "Recordar las actividades del día nunca había sido tan fácil"
+  },
+  "footer-Text": {
+    "tittle": "¿Necesitas ayuda? contactanos",
+    "text": "Somos la empresa número uno lider en el mercado"
+  }
 }

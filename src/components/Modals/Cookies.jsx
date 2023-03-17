@@ -68,7 +68,6 @@ const Cookies = () => {
       </div>
     )
   );
-  return onClose && <></>;
 };
 
 export default Cookies;

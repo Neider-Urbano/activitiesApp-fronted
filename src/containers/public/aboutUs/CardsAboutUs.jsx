@@ -1,5 +1,5 @@
 import React from "react"
-import CardAboutUs from "../../../components/AboutUs/CardAboutUs";
+import CardAboutUs from "../../../components/cards/CardAboutUs";
 import { ContenedorDeCards } from "../../../style-components/public/Components";
 import ema from "../../../assets/images/public/ema.png";
 import neider from "../../../assets/images/public/neider.png";

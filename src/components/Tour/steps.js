@@ -11,5 +11,4 @@ export const steps = [
     selector: ".third-step",
     content: "This is the third Step",
   },
-  // ...
 ];

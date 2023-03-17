@@ -1,6 +1,6 @@
 import React from "react";
 import Interfaz from "../../containers/public/IntefazDelFondo";
-import FormMessage from "../../components/formMessage/FormMessage";
+import FormMessage from "../../components/forms/FormMessage";
 import Footer from "../../containers/public/footer/Footer";
 import Cards from "../../containers/public/aboutUs/CardsAboutUs";
 
