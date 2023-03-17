@@ -41,16 +41,6 @@ const AsidePrivate = ({ showSidebar, setShowSidebar }) => {
                   </Accordion.Content>
                 </Accordion.Panel>
                 <Accordion.Panel>
-                  <Accordion.Title>User</Accordion.Title>
-                  <Accordion.Content>
-                    <Sidebar.ItemGroup>
-                      <Sidebar.Item href="#">Connfiguracion</Sidebar.Item>
-                      <Sidebar.Item href="#">Perfil</Sidebar.Item>
-                      <Sidebar.Item href="#">Sign Up</Sidebar.Item>
-                    </Sidebar.ItemGroup>
-                  </Accordion.Content>
-                </Accordion.Panel>
-                <Accordion.Panel>
                   <Accordion.Title>Aboutus</Accordion.Title>
                   <Accordion.Content>
                     <Sidebar.ItemGroup>
