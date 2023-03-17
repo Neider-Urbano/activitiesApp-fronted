@@ -13,7 +13,8 @@ const ForgotPassword = () => {
   const { errors } = states;
   const { handleActionForm } = actions;
   const { handleInput } = actions;
-
+  
+  //idioma
   const [statesOP, actionsOP, t] = useDarkProvider();
   const { darkTheme, textIdioma } = statesOP.optionPage;
 
