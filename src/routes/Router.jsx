@@ -1,5 +1,8 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
+import Loader from "../components/loader/Loader.jsx";
+import Dashboard from "../containers/private/Dashboard.jsx";
+import { calendarData } from "./calendarData.js";
 import {
   PageLazyPublic,
   PageLazyPrivate,
@@ -8,6 +11,7 @@ import {
   PageLazyPassword,
   PageLazy404,
 } from "./index.js";
+import MyCalendar from "../containers/private/MyCalendar.jsx";
 
 export const Router = () => {
   return (
@@ -16,20 +20,37 @@ export const Router = () => {
         path="/"
         exact
         element={
-          <Suspense fallback={<h1>Cargando inicio</h1>}>
+          <Suspense fallback={<Loader />}>
             <PageLazyPublic />
           </Suspense>
         }
       />
-      <Route
-        path="/home"
-        exact
-        element={
-          <Suspense fallback={<h1>Cargando home</h1>}>
-            <PageLazyPrivate />
-          </Suspense>
-        }
-      />
+
+      <Route path="/dashboard">
+        <Route path={"perfil"} element={<p>Perfil</p>} />
+        <Route path={"favorites"} element={<p>favorites</p>} />
+        <Route
+          path={"calendar"}
+          element={
+            <Suspense fallback={<h1>Cargando Calendar</h1>}>
+              <PageLazyPrivate>
+                <MyCalendar data={calendarData} />
+              </PageLazyPrivate>
+            </Suspense>
+          }
+        />
+        <Route
+          index
+          element={
+            <Suspense fallback={<h1>Cargando home</h1>}>
+              <PageLazyPrivate>
+                <Dashboard />
+              </PageLazyPrivate>
+            </Suspense>
+          }
+        />
+      </Route>
+
       <Route
         path="/login"
         exact
