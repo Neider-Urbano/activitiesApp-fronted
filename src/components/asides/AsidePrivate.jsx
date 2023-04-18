@@ -1,5 +1,6 @@
 import React from "react";
 import { Sidebar, Accordion } from "flowbite-react";
+import { Link } from "react-router-dom";
 
 const AsidePrivate = ({ showSidebar, setShowSidebar }) => {
   return (
@@ -36,7 +37,9 @@ const AsidePrivate = ({ showSidebar, setShowSidebar }) => {
                       <Sidebar.Item href="#">New</Sidebar.Item>
                       <Sidebar.Item href="#">List</Sidebar.Item>
                       <Sidebar.Item href="#">Favorits</Sidebar.Item>
-                      <Sidebar.Item href="#">Calendario</Sidebar.Item>
+                      <Sidebar.Item>
+                        <Link to="/dashboard/calendar">Calendario</Link>
+                      </Sidebar.Item>
                     </Sidebar.ItemGroup>
                   </Accordion.Content>
                 </Accordion.Panel>

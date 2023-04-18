@@ -29,7 +29,10 @@ const DropdownPerfil = () => {
         </span>
       </Dropdown.Header>
       <Dropdown.Item>
-        <Link to="/perfil" className="flex gap-2 text-md items-center">
+        <Link
+          to="/dashboard/perfil"
+          className="flex gap-2 text-md items-center"
+        >
           <FontAwesomeIcon icon={faCircleUser} />
           <p>perfil</p>
         </Link>
